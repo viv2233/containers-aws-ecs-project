@@ -1,0 +1,10 @@
+# Use the official Apache HTTP Server image
+FROM httpd:latest
+
+# Copy the local index.html file to the Apache server's document root
+COPY index.html /usr/local/apache2/htdocs/
+
+# Expose port 80 for HTTP traffic
+EXPOSE 80
+
+# Start the Apache HTTP Server (default command provided by base image)
